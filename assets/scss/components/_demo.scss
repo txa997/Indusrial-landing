@@ -91,6 +91,10 @@
             @media #{$over,$xxxl,$xxl,$xl,$lg,$md} {
                 transform: translateY(100%);
             }
+
+            a {
+                padding: 12px 37px;
+            }
         }
         
     

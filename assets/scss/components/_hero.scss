@@ -326,6 +326,20 @@
         top: 0;
         z-index: -1;
         width: 28%;
+
+        @media #{$xl} {
+            right: -150px;
+            top: 90px;
+        }
+
+        @media #{$lg} {
+            right: -100px;
+            top: 90px;
+        }
+
+        @media #{$md,$xs} {
+            display: none;
+        }
     }
     
 }

@@ -1,0 +1,212 @@
+
+
+.lg-save-1 {
+    &-area {
+        background: var(--lg-clr-sd-1);
+    }
+
+    &-top {
+        display: flex;
+        align-items: center;
+        gap: 52px;
+
+        @media #{$xs} {
+            flex-wrap: wrap;
+        }
+    }
+
+    &-doller {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        font-size: 45px;
+        line-height: 1;
+        font-weight: 700;
+        position: relative;
+        padding: 20px;
+        color: #fff;
+        text-transform: uppercase;
+        flex: 0 0 auto;
+
+        span {
+            &:nth-child(1) {
+                font-size: 23px;
+                font-weight: 500;
+                opacity: 80%;
+                letter-spacing: 6px;
+                margin-bottom: 8px;
+            }
+        }
+
+        &-curcle-shape {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            animation: pulse linear 2s infinite;
+        }
+
+        &-shape {
+            position: absolute;
+            right: -40px;
+            top: -20px;
+            animation: flash linear 1s infinite;
+        }
+        
+
+        &-title {
+            font-size: 64px;
+            font-weight: 600;
+            line-height: 1.09;
+            letter-spacing: -2px;
+            max-width: 510px;
+            position: relative;
+
+
+            @media #{$xl} {
+                font-size: 55px;
+            }
+
+            @media #{$lg} {
+                font-size: 50px;
+            }
+
+            @media #{$md} {
+                font-size: 45px;
+            }
+
+            @media #{$xs} {
+                font-size: 35px;
+            }
+
+            @media #{$sm} {
+                font-size: 40px;
+            }
+
+
+
+            &-shape {
+                position: absolute;
+                bottom: -30px;
+                right: 29px;
+
+                animation: jello linear 1s infinite;
+            }
+        }
+    }
+
+    &-content {
+        max-width: 530px;
+
+        .para {
+            margin-bottom: 24px;
+        }
+    }
+
+    &-list li {
+        font-weight: 500;
+
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+
+        i {
+            margin-right: 10px;
+        }
+    }
+
+    &-bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+        align-items: center;
+
+        @media #{$lg,$md,$xs} {
+            flex-wrap: wrap;
+        }
+    }
+
+    
+    &-card {
+        position: relative;
+        z-index: 1;
+        flex: 0 0 auto;
+
+        @media #{$xs} {
+            width: 100%;
+        }
+
+        &-dot-shape {
+            position: absolute;
+            bottom: -29px;
+            left: -77px;
+            z-index: -2;
+
+            animation: shake 10s linear infinite;
+
+            @media #{$md,$xs} {
+                display: none;
+            }
+        }
+
+        &-single {
+            padding: 32px 28px;
+            display: flex;
+            align-items: center;
+            gap: 48px;
+            position: relative;
+
+            @media #{$xs} {
+                width: 100%;
+                gap: 18px;
+                flex-direction: column;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 6px;
+            }
+
+            .card-logo {
+                pointer-events: none;
+            }
+            
+
+            .card-bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+
+            .save-doller {
+                font-size: 20px;
+                line-height: 26px;
+                font-weight: 400;
+                color: rgb(0 0 0 / 50%);
+
+                b {
+                    font-weight: 700;
+                    color: rgb(0 0 0 / 100%);
+                }
+                
+                br {
+                    @media #{$xs} {
+                        display: none;
+                    }
+                }
+            }
+            
+        }
+    }
+    
+    
+    
+}

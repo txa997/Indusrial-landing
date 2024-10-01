@@ -4,7 +4,7 @@
 .lg-features-1 {
 
     &-area {
-        background: #fff;
+        background: #021F45;
     }
 
     &-bg-shape {
@@ -19,31 +19,14 @@
 
     &-scn-title {
         .lg-scn-title-1 {
-            font-size: 45px;
-            letter-spacing: 0px;
-            line-height: 1.177;
-
-            @media #{$lg} {
-                font-size: 40px;
-            }
-
-            @media #{$md} {
-                font-size: 35px;
-                letter-spacing: -1px;
-            }
-        
-            @media #{$xs} {
-                font-size: 26px;
-                letter-spacing: 0px;
-            }
-        
-            @media #{$sm} {
-                font-size: 30px;
-            }
+            color: #fff;
+            max-width: 505px;
         }
 
         .scn-para {
-            margin-top: 33px;
+            margin-top: 41px;
+            color: #fff;
+            opacity: 88%;
         }
     }
 
@@ -71,11 +54,16 @@
             display: flex;
             align-items: baseline;
             gap: 15px;
+            color: #fff;
+            font-weight: 500;
 
             .icon {
                 transition: all .5s var(--wa-cube-1);
                 * {
                     transition: all .5s var(--wa-cube-1);
+                }
+                svg *{
+                    fill: var(--lg-clr-sd-1);
                 }
             }
 
@@ -83,7 +71,7 @@
                 .icon {
                     transform: scale(120%);
                     svg * {
-                        fill: var(--lg-clr-pr-1);
+                        fill: #fff;
                     }
                 }
             }

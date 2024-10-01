@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 } //
 			});
 
-        lgherot2.from(".lg-hero-1-plug " , { xPercent: 100, stagger: .1, delay: .3 })
+        lgherot2.from(".lg-hero-1-plug " , { xPercent: 100, stagger: .1, delay: 1 })
         lgherot2.from(".lg-hero-1-plug-single" , { scale: 0, stagger: .1 },"<=.2")
 
         if($('.wa-split-text-3').length) {
@@ -210,8 +210,22 @@ var lgherofeature = gsap.timeline({
     } 
 });
 
-lgherofeature.from(".lg-h1-f-scale-1" , { scale: 0, })
-lgherofeature.from(".lg-h1-f-scale-2" , { scale: 0, },"<=.2")
+lgherofeature.from(".lg-h1-f-slide-right" , { xPercent: -100, opacity: 0, stagger: .2 })
+lgherofeature.from(".lg-h1-f-slide-left" , { xPercent: 100, opacity: 0, stagger: .2 },"<=.2")
+		
+var lgship = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".lg-multi-scn-1-ship-1",
+		start: "top 90%",  
+        toggleActions: "play reverse play reverse",
+        markers: false  ,
+	},
+	defaults: { duration: 1.2,
+        ease: "power1.out", 
+    } 
+});
+
+lgship.from(".lg-multi-scn-1-ship-1" , { xPercent: 100, opacity: 0, })
 
 		
 var lgfeaturestl = gsap.timeline({
@@ -231,7 +245,20 @@ lgfeaturestl.from(".lg-features-1-img-3" , { yPercent: 100, opacity: 0 }, "<=.3"
 lgfeaturestl.from(".lg-features-1-img-4" , { yPercent: 100, opacity: 0 }, "<=.3")
 lgfeaturestl.from(".lg-features-1-img-6" , { yPercent: 100, opacity: 0 }, "<=.3")
 
+var lgsv1 = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".lg-save-1-card",
+		start: "top 85%",  
+        toggleActions: "play reverse play reverse",
+        markers: false  ,
+	},
+	defaults: { duration: 1,
+		ease: "Back.easeOut", 
+    } 
+});
 
+lgsv1.from(".lg-sv1-card-slidedown" , { yPercent: 50,  })
+lgsv1.from(".lg-sv1-card-slideup" , { yPercent: -50,  } , "<=")
 
 var laa_footer = gsap.timeline({
 
@@ -247,6 +274,7 @@ var laa_footer = gsap.timeline({
 });
 	
 laa_footer.from(".lg-footer-bg-img img" , { yPercent: 50 ,  })
+
 
 
 document.querySelectorAll('.laa-pattn-two').forEach((section, index) => {
