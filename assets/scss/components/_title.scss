@@ -1,0 +1,102 @@
+
+
+/* 
+    heading-paragraph-css-start
+*/
+
+
+
+.lg-heading-1 {
+    font-family: var(--lg-p-font-1);
+    color: #000;
+    text-transform: capitalize;
+    line-height: 1.093;
+    margin-bottom: 0px;
+
+
+    &:is(.has-clr-white) {
+        color: #fff;
+    }
+}
+
+
+.lg-para-1 {
+    font-family: var(--lg-p-font-1);
+    font-weight: 400;
+    line-height: 30px;
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 0px;
+
+    &:is(.has-white) {
+        color: #fff;
+    }
+}
+
+
+.lg-subtitle-1 {
+    font-family: var(--lg-p-font-1);
+    font-weight: 500;
+    color: #fff;
+    background: var(--lg-clr-pr-1);
+    display: inline-block;
+    line-height: 1;
+    font-size: 16px;
+    border-radius: 4px;
+    padding: 5px 12px;
+    margin-bottom: 18px;
+}
+
+
+.lg-scn-title-1 {
+    font-family: var(--lg-h-font-1);
+    text-transform: uppercase;
+    font-size: 64px;
+    font-weight: 600;
+    color: var(--lg-clr-h1);
+    letter-spacing: -1px;
+    line-height: 0.796;
+    margin-bottom: 0;
+    overflow: hidden;
+
+
+    &:is(.has-clr-white) {
+        color: #fff;
+    }
+
+
+    .split-line {
+        padding-top: 10px;
+        margin-bottom: -10px;
+
+        @media #{$xs} {
+            margin-bottom: -5px;
+        }
+    }
+
+    @media #{$xl} {
+        font-size: 58px;
+    }
+
+    @media #{$lg} {
+        font-size: 48px;
+    }
+
+    @media #{$md} {
+        font-size: 35px;
+        letter-spacing: -1px;
+    }
+
+    @media #{$xs} {
+        font-size: 26px;
+        letter-spacing: 0px;
+    }
+
+    @media #{$sm} {
+        font-size: 30px;
+    }
+}
+
+/* 
+    heading-paragraph-css-end
+*/

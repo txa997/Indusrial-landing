@@ -1,0 +1,51 @@
+/* 
+    animation-section-start
+*/
+
+.laa-animate-1 {
+    &-wrap {
+        padding: 0 20px;
+        padding-top: 100px;
+    }
+
+    &-bg-shape {
+        position: absolute;
+        left: 4%;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    &-plane {
+        width: 31%;
+        position: absolute;
+        top: 27%;
+        right: 35%;
+        z-index: 1;
+    }
+
+    &-cloud-1 {
+        width: 27%;
+        position: absolute;
+        right: 10%;
+        bottom: 0;
+    }
+
+    &-cloud-3 {
+        width: 22%;
+        position: absolute;
+        bottom: 0;
+        left: 13%;
+    }
+
+    &-cloud-2 {
+        width: 51%;
+        position: absolute;
+        right: 3%;
+        top: 6%;
+        z-index: 2;
+    }
+}
+
+/* 
+    animation-section-end
+*/

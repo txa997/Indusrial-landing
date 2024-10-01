@@ -1,0 +1,191 @@
+
+/* 
+    button-component-start
+*/
+
+.lg-menu-btn-1 {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 auto;
+    background: var(--lg-clr-pr-1);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    align-content: center;
+    justify-content: center;
+    gap: 5px;
+    transition: all 0.5s var(--wa-cube-1);
+    border-radius: 5px;
+
+    span {
+        display: inline-block;
+        flex: 0 0 auto;
+        width: 5px;
+        height: 5px;
+        background: #fff;
+        border-radius: 50%;
+        transition: all .5s var(--wa-cube-1);
+    }
+
+    &:hover {
+        background: var(--lg-clr-h1);
+        span {
+            &:nth-child(1) {
+                transform: translate(-5px, -5px);
+            }
+            &:nth-child(2) {
+                transform: translate(0px, -5px);
+            }
+            &:nth-child(3) {
+                transform: translate(5px, -5px);
+            }
+            &:nth-child(4) {
+                transform: translate(-5px, 0px);
+            }
+            &:nth-child(6) {
+                transform: translate(5px, 0px);
+            }
+            &:nth-child(7) {
+                transform: translate(-5px, 5px);
+            }
+            &:nth-child(8) {
+                transform: translate(0px, 5px);
+            }
+            &:nth-child(9) {
+                transform: translate(5px, 5px);
+            }
+        }
+    }
+
+
+}
+
+
+/* 
+    pr-btn-1-start
+*/
+.la-pr-btn-1 {
+    display: inline-block;
+    flex: 0 0 auto;
+    font-family: var(--lg-p-font-1);
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 1;
+    background: var(--lg-clr-pr-1);
+    color: #fff;
+    padding: 12px 37px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all .5s var(--wa-cube-1);
+
+    i {
+        margin-left: 10px;
+    }
+
+    .text {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        line-height: 1.4;
+
+        &::after {
+            top: 0;
+            left: 0;
+            opacity: 0;
+            width: 100%;
+            display: block;
+            transition: all 0.5s var(--wa-cube-1);
+            position: absolute;
+            content: attr(data-back);
+            transform: translateY(100%);
+        }
+    
+        &::before {
+            top: 0;
+            left: 0;
+            opacity: 1;
+            display: block;
+            transition: all 0.5s var(--wa-cube-1);
+            position: relative;
+            content: attr(data-front);
+            transform: translateY(0);
+        }
+    }
+
+    &:hover {
+        background: #fff;
+        color: #000;
+
+        .text {
+            &::after {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+            &::before {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+        }
+    }
+
+    &:is(.has-btn-2) {
+        background: var(--lg-clr-sd-1);
+        color: #000;
+
+        &:hover {
+            background: #fff;
+        }
+    }
+}
+
+
+
+.lg-pr-btn-2 {
+    font-family: var(--lg-p-font-1);
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #fff;
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+    transition: all .4s var(--wa-cube-1);
+
+    i {
+        position: relative;
+        transition: all .4s var(--wa-cube-1);
+        color: #fff;
+        font-weight: 700;
+
+        &::after {
+            content: "";
+            width: 0px;
+            height: 2px;
+            position: absolute;
+            right: 2px;
+            top: 45%;
+            transform: translateY(-20%);
+            background: var(--lg-clr-sd-1);
+            transition: all .4s var(--wa-cube-1);
+        }
+    }
+
+    &:hover {
+        transform: translateX(5px);
+        color: var(--lg-clr-sd-1);
+        i {
+            transform: translateX(10px);
+            color: var(--lg-clr-sd-1);
+            &::after {
+                width: 20px;
+            }
+        }
+    }
+}
+
+
+/* 
+    button-component-end
+*/
