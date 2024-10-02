@@ -226,7 +226,7 @@
             top: 0;
             left: 0;
             background: #000;
-            opacity: 56%;
+            opacity: 72%;
         }
     }
     
@@ -286,6 +286,7 @@
             font-size: 23px;
             line-height: 1.217;
             font-weight: 600;
+            margin-bottom: 2px;
 
             @media #{$xl,$lg,$md,$xs} {
                 font-size: 20px;
@@ -294,7 +295,10 @@
 
         .disc {
             font-size: 16px;
-            line-height: 16px;
+            line-height: 20px;
+            text-transform: capitalize;
+            opacity: 72%;
+        
         }
 
         

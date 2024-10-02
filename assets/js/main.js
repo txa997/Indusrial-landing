@@ -296,10 +296,11 @@ gsap.utils.toArray(".laa-img-parallax").forEach(function(container) {
 		
 	}); 
 	tl.from(image, {
-		yPercent: -20,
+		yPercent: -15,
 		ease: "none",
+
 	}).to(image, {
-		yPercent: 20,
+		yPercent: 15,
 		ease: "none",
 	}); 
 });
