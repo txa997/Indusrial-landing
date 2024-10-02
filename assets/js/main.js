@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 } //
 			});
 
-        lgherot2.from(".lg-hero-1-plug " , { xPercent: 100, stagger: .1, delay: 1 })
+        lgherot2.from(".lg-hero-1-plug " , { xPercent: 100, stagger: .1, delay: 1.5 })
         lgherot2.from(".lg-hero-1-plug-single" , { scale: 0, stagger: .1 },"<=.2")
 
         if($('.wa-split-text-3').length) {
@@ -234,8 +234,10 @@ var lgfeaturestl = gsap.timeline({
 		start: "top 90%",  
 		markers: false  
 	},
-	defaults: { duration: 1,
-		ease: "power4.out", } //
+	defaults: { 
+		duration: 1,
+		ease: "power4.out", 
+	} //
 });
 
 lgfeaturestl.from(".lg-features-1-img-1" , { yPercent: 50, })
@@ -260,39 +262,28 @@ var lgsv1 = gsap.timeline({
 lgsv1.from(".lg-sv1-card-slidedown" , { yPercent: 50,  })
 lgsv1.from(".lg-sv1-card-slideup" , { yPercent: -50,  } , "<=")
 
-var laa_footer = gsap.timeline({
-
+var lgfooter = gsap.timeline({
 	scrollTrigger: {
-	  animation: laa_footer,
-	  trigger: '.lg-footer-bg-img',
-	  start: "top 95%",
-	  end: "top 50%",
-	  scrub: 1,
-	  toggleActions: "play reverse play reverse",
-	  markers: false
-	}
+		trigger: ".lg-footer-img",
+		start: "top 85%",  
+        toggleActions: "play reverse play reverse",
+        markers: false  ,
+	},
+	defaults: { 
+		duration: 1,
+		ease: "power4.out", 
+    } 
 });
-	
-laa_footer.from(".lg-footer-bg-img img" , { yPercent: 50 ,  })
+
+lgfooter.from(".lg-footer-img" , { xPercent: 50,  })
+lgfooter.from(".lg-footer-slider-down" , { yPercent: -100,  })
+lgfooter.from(".lg-footer-slider-up" , { yPercent: 110,  } , "<=.4")
 
 
 
-document.querySelectorAll('.laa-pattn-two').forEach((section, index) => {
-	const timeline = gsap.timeline({
-	  scrollTrigger: {
-		trigger: section,
-		start: "top 95%",
-		toggleActions: "play reverse play reverse",
-		markers: false,
-	  }
-	});
-  
-	timeline.from(section.querySelector('.laa-pattn-two-1'), { yPercent: 100, opacity: 0.16, duration: .3 });
-	timeline.from(section.querySelector('.laa-pattn-two-2'), { xPercent: -100, opacity: 0.16, duration: .3 });
-	timeline.from(section.querySelector('.laa-pattn-two-3'), { xPercent: -100, opacity: 0.56, duration: .3 });
-	timeline.from(section.querySelector('.laa-pattn-two-4'), { yPercent: 100, opacity: 0.08, duration: .3 });
-});
-  
+
+
+
 gsap.utils.toArray(".laa-img-parallax").forEach(function(container) {
 	let image = container.querySelector("img");
 

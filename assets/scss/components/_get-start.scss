@@ -11,7 +11,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            background: linear-gradient(90deg, rgba(26, 45, 78, 1) 35%, rgba(0, 212, 255, 0) 100%);
+            background: linear-gradient(90deg, rgb(0 0 0) 35%, rgba(0, 212, 255, 0) 100%);
             z-index: -1;
         }
     }
@@ -33,30 +33,10 @@
     }
 
     &-scn-title {
-        .lg-scn-title-1 {
-            font-size: 45px;
-            letter-spacing: 0;
-            line-height: 1.177;
 
-            @media #{$lg} {
-                font-size: 40px;
-            }
-    
-            @media #{$md} {
-                font-size: 35px;
-                letter-spacing: -1px;
-            }
-        
-            @media #{$xs} {
-                font-size: 26px;
-                letter-spacing: 0px;
-            }
-        
-            @media #{$sm} {
-                font-size: 30px;
-            }
+        .lg-subtitle-1 {
+            background: rgb(255 255 255 / 12%);
         }
-
     }
 
     &-content {

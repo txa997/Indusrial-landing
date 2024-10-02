@@ -4,7 +4,7 @@
 
 .lg-feature-card {
     &-scn-title {
-        max-width: 940px;
+        max-width: 619px;
     }
     
     &-wrap {
@@ -40,6 +40,7 @@
 
             svg {
                 * {
+                    fill: var(--lg-clr-pr-1);
                     transition: all .5s var(--wa-cube-1);  
                 }
             }
